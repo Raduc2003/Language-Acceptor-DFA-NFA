@@ -34,12 +34,15 @@ def tranzitie(stare,litera):
 tranzitie('q0','0')
 print(stari_finale)
 cuv=input()
+drum=[]
 stare='q0'
 for litera in cuv:
+    drum.append(stare)
     stare=tranzitie(stare,litera)
     if stare==-1:
         print("neacceptat")
         break;
 if stare in stari_finale:
     print("acceptat")
+    print(*drum,sep='->')
 
